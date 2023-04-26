@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{%block title%}{{ job.title}}{%endblock%}
+{%block content%}
+<h1>{{job.title}}</h1>
+<p class ="date">
+    Published {{job.publish}}
+</p>
+{{job.body|linebreaks}}
+<h1> Responsiblities</h1>
+{{job.responsibilities|linebreaks}}
+<h1>Requirement </h1>
+{{job.requirement|linebreaks}}
+
+<a href ="{% url "jobs:apply_job" job.id %}" >Apply</a>
+{% endblock %}

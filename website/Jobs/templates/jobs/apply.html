@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Apply for A Post {% endblock%}
+{%block content%}
+{% if sent %}
+<h1> Successfully Sent </h1>
+<p>"{{job.title}}" was successfully sent </p>
+{% else %}
+<h1> Apply</h1>
+<form method="post" enctype="multipart/form-data" action = " ">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type = "submit" value = "Submit">
+</form>
+
+{% endif %}
+{% endblock %}
+
+ 

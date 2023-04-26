@@ -1,0 +1,20 @@
+
+{% block title %} Services {% endblock %}
+
+{% block content %}
+<h1> Services </h1>
+{% for service in services %}
+
+<h2>
+    <a>
+        {{service.title}}
+    </a>
+</h2>
+<p class = "date">
+    Published {{service.publish}} 
+</p>
+<img  src = "{{service.image.url}}"/>
+{{service.body}}
+
+{% endfor %}
+{% endblock %}

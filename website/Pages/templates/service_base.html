@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} </title>
+        <link href ="{% static "css/services.css" %}" rel="stylesheet">
+    </head>
+<body>
+    <div id ="content">
+        {%block content%}
+        {% endblock %}
+
+    </div>
+
+    <div id ="sidebar">
+        <h2> News </h2>
+        <p> This is a news </p>
+
+    </div>
+
+</body>
+</html>
